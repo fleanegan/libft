@@ -60,6 +60,7 @@ SRCS	= 	ft_substr.c \
 			get_next_line_utils_bonus.c \
 			get_next_line_bonus.c \
 			get_next_line_condition_wrapper.c \
+			count_entries_in_2d_char_array.c \
 
 SRCSB	=   $(SRCS)
 
