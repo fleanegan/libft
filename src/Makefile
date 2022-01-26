@@ -57,6 +57,8 @@ SRCS	= 	ft_substr.c \
 			ft_lstget_element_by_index.c \
 			ft_lstadd_element_at_index.c \
 			ft_lstget_index_of_element.c \
+			get_next_line_utils_bonus.c \
+			get_next_line_bonus.c \
 
 SRCSB	=   $(SRCS)
 
