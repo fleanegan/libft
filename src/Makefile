@@ -59,6 +59,7 @@ SRCS	= 	ft_substr.c \
 			ft_lstget_index_of_element.c \
 			get_next_line_utils_bonus.c \
 			get_next_line_bonus.c \
+			get_next_line_condition_wrapper.c \
 
 SRCSB	=   $(SRCS)
 
