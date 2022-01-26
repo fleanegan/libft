@@ -16,6 +16,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "get_next_line_bonus.h"
 
 // part 1
 int				ft_atoi(const char *nptr);
