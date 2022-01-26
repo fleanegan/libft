@@ -192,13 +192,18 @@ Test(test_get_next_line, calling_void_does_not_lose_saved)
 	free(res);
 	/* 10 */ res = get_next_line(fd[1]);
 	cr_assert_str_eq(res, "1");
-
 }
-// use test file with new line as last entry
-// use test file with multiple newlines in last read
 
-/*
-			printf("result %s\n", result);
-			printf("pos_of_nl %d\n", pos_of_nl);
-			printf("max_len %d\n", max_len);
- */
+Test(test_get_next_line, can_be_called_in_condition, .disabled=0)
+{
+	char	*file_name = "./assets/no_newline.txt";
+	int 	fd = open(file_name, O_RDONLY);
+	char	*res;
+
+	int		success = gnl(fd, &res);
+
+	cr_assert_str_eq(res, "nope");
+	cr_assert(success);
+	free(res);
+	close(fd);
+}

@@ -41,4 +41,6 @@ char	*get_next_line(int fd);
 void	save_fd_rest(t_list_sav **sav, int fd, char *content);
 char	*pop_fd_res(t_list_sav **sav, int fd);
 void	free_linked_list(t_list_sav **pSav);
+int		gnl(int fd, char **line);
+
 #endif
