@@ -35,6 +35,8 @@ char	*get_next_line(int fd)
 	pos_of_nl = -1;
 	result = NULL;
 	is_done = 0;
+	if (fd < 0 || BUFFER_SIZE < 0)
+		return (free_unnecessary_elements(result, &sav, fd, 0));
 	while (pos_of_nl == -1 && !is_done)
 	{
 		free(result);

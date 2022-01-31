@@ -22,7 +22,6 @@ size_t	count_trailing_trimmable(const char *src, const char *set);
 size_t	calc_len_sub_str(const char *src, const char *set);
 int		count_substrings(const char *s, char *c);
 int		is_char_in_set(char in, const char *set);
-void	free_2d_char_array(char **mem);
 int		calc_digits_in_number(int in);
 size_t	calc_min_unsigned(size_t a, size_t b);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
