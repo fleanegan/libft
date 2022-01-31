@@ -87,5 +87,6 @@ int				ft_lstcompare(t_list *a, t_list *b, \
 				int (*compare)(void *, void *));
 unsigned int	ft_abs(int in);
 size_t			count_entries_in_2d_char_array(char **arr2d);
+void			free_2d_array(void **mem);
 
 #endif

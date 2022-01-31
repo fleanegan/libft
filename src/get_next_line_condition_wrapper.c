@@ -15,7 +15,10 @@
 int	gnl(int fd, char **line)
 {
 	if (fd < 0 || BUFFER_SIZE < 0 || !line)
+	{
+		get_next_line(-1);
 		return (-1);
+	}
 	*line = get_next_line(fd);
 	if (*line)
 		return (1);

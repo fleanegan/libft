@@ -1,7 +1,7 @@
 SRCS	= 	ft_substr.c \
 			ft_putchar_fd.c \
 			ft_strncmp.c \
-			free_2d_char_array.c \
+			free_2d_array.c \
 			ft_atoi.c \
 			ft_split.c \
 			ft_strchr.c \

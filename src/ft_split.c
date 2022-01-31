@@ -59,18 +59,6 @@ static int	fill(char **res, char *str, int len, char charset)
 	return (1);
 }
 
-void	delete_char_array_2d(char **in)
-{
-	size_t	ctr;
-
-	ctr = 0;
-	if (! in)
-		return ;
-	while (in[ctr])
-		free(in[ctr++]);
-	free(in);
-}
-
 char	**ft_split(char const *str, char charset)
 {
 	int		len;
@@ -82,7 +70,7 @@ char	**ft_split(char const *str, char charset)
 	res = (char **) malloc(sizeof(char *) * (len + 1));
 	if (! res)
 	{
-		delete_char_array_2d(res);
+		free_2d_array((void **)res);
 		return (NULL);
 	}
 	if (! fill(res, (char *)str, len, charset))
