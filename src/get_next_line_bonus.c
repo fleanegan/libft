@@ -47,9 +47,8 @@ char	*get_next_line(int fd)
 			result = split_candidate_into_result_and_rest(fd, max_len, &result,
 					&sav);
 		}
-		else
-			if (! free_unnecessary_elements(result, &sav, fd, is_done))
-				return (NULL);
+		if (! free_unnecessary_elements(result, &sav, fd, is_done))
+			return (NULL);
 	}
 	return (result);
 }
