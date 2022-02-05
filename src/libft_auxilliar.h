@@ -6,7 +6,7 @@
 /*   By:  <fschlute>                                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:03:02 by                   #+#    #+#             */
-/*   Updated: 2021/12/03 11:32:28 by                  ###   ########.fr       */
+/*   Updated: 2022/02/04 14:11:38 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	ft_lstput_nbr_bonus(t_list *lst);
 void	ft_lstput_char_bonus(t_list *lst);
 void	ft_lstput_str_bonus(t_list *lst);
+int		*malloc_int(int in);
 #endif

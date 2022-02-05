@@ -34,6 +34,5 @@ int				replacement_for_broken_criterion_stdout_matcher(char *compare_string, FIL
 void			test_lst_intcontent_add_one(void *content);
 t_list			*generate_list_of_n_zeros(size_t n);
 void			*cpy_lstcontent_int(void *content);
-int				*malloc_int(int in);
 
 #endif	 // TEST_UTILS_H

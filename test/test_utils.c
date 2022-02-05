@@ -24,15 +24,6 @@ void zero_array(char *arr, size_t size)
 	}
 }
 
-int	*malloc_int(int in)
-{
-	int	*result;
-
-	result = malloc (sizeof(int));
-	*result = in;
-	return (result);
-}
-
 int calc_dst_memory(size_t src_len_var, size_t dst_len_var) {
 	return (int) src_len_var + (int) dst_len_var + SPACE_NULLTERMIN;
 }

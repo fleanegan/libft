@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   char_list_to_char_array.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  <fschlute>                                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 09:02:37 by                   #+#    #+#             */
-/*   Updated: 2022/02/04 14:11:38 by                  ###   ########.fr       */
+/*   Created: 2021/11/23 09:02:29 by                   #+#    #+#             */
+/*   Updated: 2022/02/05 11:21:35 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*char_list_to_char_array(t_list *lst)
 {
-	size_t	len_of_needle;
+	char	*result;
+	t_list	*tmp;
+	int		ctr;
 
-	if (!ft_strlen(needle))
-		return ((char *)(haystack));
-	len_of_needle = ft_strlen(needle);
-	while (len >= len_of_needle && *haystack)
+	if (! lst)
+		return (NULL);
+	result = malloc((SPACE_FOR_NULLTERMIN + ft_lstsize(lst)) * sizeof(char));
+	if (! result)
+		return (NULL);
+	ctr = 0;
+	tmp = lst;
+	while (lst)
 	{
-		if (!ft_strncmp(haystack, needle, len_of_needle))
-			return ((char *) haystack);
-		haystack++;
-		len--;
+		result[ctr] = *(char *)lst->content;
+		if (! result[ctr])
+			break ;
+		ctr++;
+		lst = lst->next;
 	}
-	return (NULL);
+	ft_lstclear(&tmp, free);
+	return (result);
 }
