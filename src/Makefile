@@ -61,6 +61,8 @@ SRCS	= 	ft_substr.c \
 			get_next_line_bonus.c \
 			get_next_line_condition_wrapper.c \
 			count_entries_in_2d_char_array.c \
+			char_list_to_char_array.c \
+			malloc_int.c \
 
 SRCSB	=   $(SRCS)
 

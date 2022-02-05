@@ -6,7 +6,7 @@
 /*   By:  <fschlute>                                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 09:00:26 by                   #+#    #+#             */
-/*   Updated: 2021/12/14 13:18:46 by                  ###   ########.fr       */
+/*   Updated: 2022/02/05 11:34:48 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ int				ft_lstcompare(t_list *a, t_list *b, \
 unsigned int	ft_abs(int in);
 size_t			count_entries_in_2d_char_array(char **arr2d);
 void			free_2d_array(void **mem);
+char			*char_list_to_char_array(t_list *lst);
 
 #endif

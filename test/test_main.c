@@ -54,3 +54,4 @@
 #include "test_save_rest_in_list.h"
 #include "test_get_next_line.h"
 #include "test_count_entries_in_2d_char_array.h"
+#include "test_char_list_to_char_array.h"
