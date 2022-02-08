@@ -20,3 +20,12 @@ int	*malloc_int(int in)
 	*result = in;
 	return (result);
 }
+
+unsigned long	*malloc_unsigned_long(unsigned long in)
+{
+	unsigned long	*result;
+
+	result = malloc (sizeof(unsigned long));
+	*result = in;
+	return (result);
+}
