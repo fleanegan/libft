@@ -14,6 +14,7 @@
 # include <ctype.h>
 # include <string.h>
 # include <criterion/redirect.h>
+//# include "test_generic_parser/"
 
 typedef struct strcat_obj
 {

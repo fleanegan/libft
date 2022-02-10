@@ -63,6 +63,7 @@ SRCS	= 	ft_substr.c \
 			count_entries_in_2d_char_array.c \
 			char_list_to_char_array.c \
 			malloc_int.c \
+			generic_parser.c \
 
 SRCSB	=   $(SRCS)
 
