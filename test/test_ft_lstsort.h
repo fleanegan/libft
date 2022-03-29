@@ -71,6 +71,39 @@ Test(test_lstsort, sorting_three_unordered_elements_gets_them_sorted)
 	cr_assert_eq(*(int *)lst->next->next->content, 2);
 }
 
+
+Test(test_lstsort, ete)
+{
+	int da = 1;
+	int db = 2;
+	int dc = 0;
+	int dd = 3;
+	int de = 5;
+	int df = 4;
+	t_list *a = ft_lstnew(&da);
+	t_list *b = ft_lstnew(&db);
+	t_list *c = ft_lstnew(&dc);
+	t_list *d = ft_lstnew(&dd);
+	t_list *e = ft_lstnew(&de);
+	t_list *f = ft_lstnew(&df);
+
+	t_list *lst = a;
+	ft_lstadd_back(&lst, b);
+	ft_lstadd_back(&lst, c);
+	ft_lstadd_back(&lst, d);
+	ft_lstadd_back(&lst, e);
+	ft_lstadd_back(&lst, f);
+
+	ft_lstsort(&lst, dummy_compare_ascending);
+
+	cr_assert_eq(*(int *)lst->content, 0);
+	cr_assert_eq(*(int *)lst->next->content, 1);
+	cr_assert_eq(*(int *)lst->next->next->content, 2);
+	cr_assert_eq(*(int *)lst->next->next->next->content, 3);
+	cr_assert_eq(*(int *)lst->next->next->next->next->content, 4);
+	cr_assert_eq(*(int *)lst->next->next->next->next->next->content, 5);
+}
+
 Test(test_lstsort, sorting_with_repeated_of_three)
 {
 	int da = 1;
