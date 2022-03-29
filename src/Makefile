@@ -46,10 +46,10 @@ SRCS	= 	ft_substr.c \
 			ft_lstsort.c \
 			ft_lstlast.c \
 			ft_lstdelone.c \
-			ft_lstrmnode.c \
 			ft_lstclear.c \
 			ft_lstmap.c \
 			ft_lstcompare.c \
+			ft_lstrmnode.c \
 			ft_lst_nullterminate.c \
 			ft_lstput_nbr.c \
 			ft_memccpy.c \
