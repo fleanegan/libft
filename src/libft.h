@@ -97,6 +97,9 @@ int				generic_split_line_parser(char *str, void *container, \
 				int (*struct_populate_grid_wise) \
 				(const char *, void *, int, int));
 void			**ft_lsttoarray(t_list *in, size_t content_size);
+void			ft_lstrmnode(\
+				t_list **lst, t_list *node_to_delete, void (*del)(void *));
+
 
 
 #endif
