@@ -100,6 +100,6 @@ int				generic_split_line_parser(char *str, void *container, \
 void			**ft_lsttoarray(t_list *in, size_t content_size);
 void			ft_lstrmnode(\
 				t_list **lst, t_list *node_to_delete, void (*del)(void *));
-void			**to_array(t_list *pList, int(cpy)(void *, void **));
+void			**to_array(t_list *pList, int (cpy)(void *, void **));
 
 #endif
