@@ -50,6 +50,7 @@
 #include "test_ft_lstsort.h"
 #include "test_lsttoarray.h"
 #include "test_lstrmnode.h"
+#include "test_matrix.h"
 #include "test_ft_lstget_index_of_element.h"
 #include "test_calc_pos_of_nl.h"
 #include "test_concat_n_char_new_mem.h"

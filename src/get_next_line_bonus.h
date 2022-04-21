@@ -17,11 +17,13 @@
 # define NULLTERMIN 0
 # define HAS_NOT_BEEN_FOUND -1
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 150
+#  ifdef own_source
+#   define BUFFER_SIZE 2
+#  endif
+#  ifndef BUFFER_SIZE
+#   define BUFFER_SIZE 150
+#  endif
 # endif //BUFFER_SIZE
-# ifdef own_source
-#  define BUFFER_SIZE 2
-# endif
 
 # include <stdlib.h>
 # include <fcntl.h>

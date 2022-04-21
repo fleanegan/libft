@@ -24,11 +24,11 @@ ICRITERION			= -L../criterion-v2.3.3/lib -I../criterion-v2.3.3/include -lcriteri
 CFLAGS				= -Wall -Wextra -Werror
 
 ${NAME}:			$(LIBNAMELIBFT) $(SRCS) $(TEST_HEADERS) $(TEST_SOURCES)
-					${CC} ${CFLAGS} -o $(NAME) $(TEST_SOURCES) $(ICRITERION) $(ILIBFT)
+					${CC} ${CFLAGS} -o $(NAME) $(TEST_SOURCES) $(ICRITERION) $(ILIBFT) -lm
 
 # defines "own_source", which allows for including tests specific to your code with #ifndef
 test_own:			$(LIBNAMELIBFT) $(SRCS) $(TEST_HEADERS) $(TEST_SOURCES)
-					${CC} ${CFLAGS} -D own_source -o $(NAME) $(TEST_SOURCES) $(ICRITERION) $(ILIBFT)
+					${CC} ${CFLAGS} -D own_source -o $(NAME) $(TEST_SOURCES) $(ICRITERION) $(ILIBFT) -lm
 
 all:				${NAME}
 

@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "get_next_line_bonus.h"
+# include <math.h>
 
 // part 1
 int				ft_atoi(const char *nptr);
@@ -66,6 +67,14 @@ typedef struct s_list
 	struct s_list	*prev;
 }	t_list;
 
+typedef struct s_matrix
+{
+	double	mat[3][3];
+	int		width;
+	int		height;
+}			t_matrix;
+
+
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 int				ft_lstsize(t_list *lst);
@@ -101,5 +110,10 @@ void			**ft_lsttoarray(t_list *in, size_t content_size);
 void			ft_lstrmnode(\
 				t_list **lst, t_list *node_to_delete, void (*del)(void *));
 void			**to_array(t_list *pList, int (cpy)(void *, void **));
+void			zero_init_rotation_matrix(t_matrix *t);
+t_matrix		euler2rot(double alpha_deg, double beta_deg, double gamma_deg);
+int multiply(t_matrix *a, t_matrix *b, t_matrix *result);
+void			rotate_point(t_matrix *p, t_matrix *mat);
+void			zero_init_point(t_matrix *p);
 
 #endif
