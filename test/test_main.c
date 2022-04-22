@@ -48,6 +48,7 @@
 #include "test_ft_lstmap.h"
 #include "test_ft_lstcompare.h"
 #include "test_ft_lstsort.h"
+#include "test_to_array.h"
 #include "test_lsttoarray.h"
 #include "test_lstrmnode.h"
 #include "test_matrix.h"
