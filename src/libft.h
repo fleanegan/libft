@@ -74,7 +74,6 @@ typedef struct s_matrix
 	int		height;
 }			t_matrix;
 
-
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 int				ft_lstsize(t_list *lst);
@@ -112,7 +111,8 @@ void			ft_lstrmnode(\
 void			**to_array(t_list *pList, int (cpy)(void *, void **));
 void			zero_init_rotation_matrix(t_matrix *t);
 t_matrix		euler2rot(double alpha_deg, double beta_deg, double gamma_deg);
-int multiply(t_matrix *a, t_matrix *b, t_matrix *result);
+int				multiply(t_matrix *a, t_matrix *b, t_matrix *result);
+int				scalar_multiply(t_matrix *a, float b, t_matrix *result);
 void			rotate_point(t_matrix *p, t_matrix *mat);
 void			zero_init_point(t_matrix *p);
 
