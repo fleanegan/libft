@@ -21,7 +21,7 @@ ILIBFT				= -L../src -l:libft.a
 
 ICRITERION			= -L../criterion-v2.3.3/lib -I../criterion-v2.3.3/include -lcriterion -Wl,-rpath=../criterion-v2.3.3/lib
 
-CFLAGS				= -Wall -Wextra -Werror
+CFLAGS				=
 
 ${NAME}:			$(LIBNAMELIBFT) $(SRCS) $(TEST_HEADERS) $(TEST_SOURCES)
 					${CC} ${CFLAGS} -o $(NAME) $(TEST_SOURCES) $(ICRITERION) $(ILIBFT) -lm
